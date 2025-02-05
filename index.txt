@@ -1,0 +1,206 @@
+Wurld Prince
+
+This is a photographer portfolio html template, made by codewithsadee.
+
+
+
+#----------- HEADER --------#
+
+alt = Wurld home
+
+aria-label = open menu
+alt = menu icon
+
+alt = Wurld ome
+
+aria-label = close menu
+
+
+
+home
+Gallery
+About
+Services
+portfolio
+Contact us
+
+
+Login
+
+
+/========== Gallery ===========/
+
+The Drunken
+Food, Event
+alt = arrow-forward icon
+
+Lettuce Entertain
+Landscape
+
+Leaping Lizard
+Model, Fashion
+
+Juan More Taco
+Architecture, Event
+
+Goldilox Bagels
+People, Film
+
+Cookie Monstah
+Wedding, Event
+
+Divine Pastabilities
+Wedding, Model
+
+The Lockhart Bar
+Health & Wellnes
+
+alt = mouse scroll
+
+
+/  CATEGORY /
+
+1. Landscape,
+2. Model,
+3. Street,
+4. Product,
+5. Fashion,
+6. Film,
+7. Architecture,
+8. Event,
+9. Wedding, 
+10. People,
+11. Event,
+12. Food,
+13. Health & Wellnes.
+
+
+/======== CATEGORY =========/
+Hi, I'm
+Wurld Prince
+
+I am a passionate
+photographer
+who is working in the field for 
+last 10 years.
+
+
+/ ====== SERVICES ====== /
+
+My Services
+
+Wedding photography
+Aut temporibus qui vero.
+
+aria-label = See more
+
+Event Organiser
+Nobis, magni modi ipsa culpa.
+
+Product Marketing
+tenetur porro repellendus!
+
+Videography
+Ab quod perspiciatis ratione deleniti veritatis
+
+/ ========= PORTFOLIO ====== /
+
+My Recent Work.
+
+Shoe Promo
+Product
+
+aria-label = See more
+
+<svg xmlns="https://www.w3.org/2000/  svg" width="43" height="20" viewBox="0 0 43 20" fill="none">
+<path d="M0 10H41" stroke="white" stroke-width="2" />
+<path d="M33 1L41.9 10.2727L33 19" stroke="white" stroke-width="2" />
+</svg>
+
+Wedding Show
+Wedding
+
+Fashion Show
+Fashion, Model
+
+Jumbo Barger
+Food
+
+
+/---------- CONTACT US -----------/
+
+Contact Us
+
+Work inquiry, Job opportunities? Send Message.
+
+alt = arrow-forward icon
+
+alt = photography
+
+
+
+/========= FOOTER ========\
+
+alt = Wurld home
+
+Facebook.
+Insta.
+X.
+
+Made with love
+
+/======== BACK TO THE TOP ==========/
+
+aria-label = back to the top
+
+alt = arrow-up icon
+
+/======== LOADING =======/
+alt = loading 
+
+alt = loading shape
+
+
+
+
+
+// 
+// CUSTOM CURSOR
+// 
+
+const cursor = document.querySelector("[data-cursor]");
+const anchorElements = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button");
+
+// change cursorElement position based on cursor move
+document.body.addEventListener("mousemove",
+function (event) {
+    setTimeout(function () {
+        cursor.style.top = `${event.clientY}px`;
+        cursor.style.left = `${event.clientX}px`;
+    }, 100);
+});
+
+// add cursor hovered class
+const hoverActive = function () { cursor.classList.add("hovered"); }
+
+// remove cursor hovered class
+const hoverDeactive = function () { cursor.classList.remove("hovered"); }
+
+// add hover effect on cursor, when hover on any button or hyperlink
+addEventOnElements(anchorElements, "mouseover", hoverActive);
+addEventOnElements(anchorElements, "mouseout", hoverDeactive);
+addEventOnElements(buttons, "mouseover", hoverActive);
+addEventOnElements(buttons, "mouseout", hoverDeactive);
+
+// add disabled class on cursorElement, when mouse out of body
+document.body.addEventListener("mouseout",
+function () {
+    cursor.classList.add("disabled");
+});
+
+// remove disabled class on cursorElement, when mouse out of body
+document.body.addEventListener("mouseover",
+function () {
+    cursor.classList.remove("disabled");
+});
